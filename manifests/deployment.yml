@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: manwoojpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: manwoojpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: manwoojpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: manwoojpipelinesjavascriptdocker 
+          image: mjeoncontainerregistry.azurecr.io/manwoojpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
