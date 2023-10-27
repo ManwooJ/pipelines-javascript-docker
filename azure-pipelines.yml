@@ -19,7 +19,7 @@ variables:
   imagePullSecret: 'mjeoncontainerregistry9439-auth'
 
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+  vmImageName: 'vmss-agent2'
 
   # Name of the new namespace being created to deploy the PR changes.
   k8sNamespaceForPR: 'review-app-$(System.PullRequest.PullRequestId)'
