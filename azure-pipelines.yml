@@ -42,10 +42,15 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
-
     - upload: manifests
-      artifact: manifests
-
+      artifact: manifests    
+    - task: CmdLine@2
+      inputs:
+        script: |
+          echo Write your commands here
+          echo Hello world
+          cd %userprofile%\.kube\config
+          dir
 - stage: Deploy
   displayName: Deploy stage
   dependsOn: Build
